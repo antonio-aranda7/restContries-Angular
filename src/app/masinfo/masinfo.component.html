@@ -1,0 +1,30 @@
+<div *ngIf="banderas!=null;"><div>
+      <div>
+        <img [src]="banderas.flag" [alt]="banderas.name">
+      </div>
+      <div>
+        <h1>{{ banderas.name }}</h1>
+        <div>
+          <p><strong>Dominio:             </strong> {{ banderas.topLevelDomain}}</p>
+          <p><strong>Alpha2Code:          </strong> {{ banderas.alpha2Code}}</p>
+          <p><strong>Alpha3Code:          </strong> {{ banderas.alpha3Code}}</p>
+          <p><strong>Codigo de Marcación: </strong> {{ banderas.callingCodes}}</p>
+          <p><strong>Capital:             </strong> {{ banderas.capital }}</p>
+          <p><strong>AltSpellings:        </strong> {{ banderas.altSpellings }}</p>
+          <p><strong>Continente:          </strong> {{ banderas.region }}</p>
+          <p><strong>SubRegion:           </strong> {{ banderas.subregion }}</p>
+          <p><strong>Poblacion:           </strong> {{ banderas.population }}</p>
+          <p><strong>Latitud:             </strong> {{ banderas.latlng}}</p>
+          <p><strong>Gentilicio:          </strong> {{ banderas.demonym}}</p>
+          <p><strong>Area:                </strong> {{ banderas.area}}</p>
+          <p><strong>Zona Horaria:           </strong> {{ banderas.timezones}}</p>
+          <p><strong>Nombre Nativo:       </strong> {{ banderas.nativeName }}</p>
+          <p><strong>NumericCode:         </strong> {{ banderas.numericCode}}</p>
+          <p><strong>Moneda:              </strong> {{ banderas.currencies[0].name }}</p>
+          <p><strong>Languages:           </strong> {{ banderas.languages[0].nativeName}</p>
+        </div>
+        <div>
+          <button type="button" [routerLink]="[ '/' ]">Atras</button>
+        </div>
+    <!-- Para mostrar los datos de la propiedad 'banderas' -->
+  </div>

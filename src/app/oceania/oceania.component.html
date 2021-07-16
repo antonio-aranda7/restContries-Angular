@@ -1,0 +1,19 @@
+<div *ngIf="banderas!=null; else espera">
+  <table style="text-align:center">
+    <tr>
+      <td>Nombre</td><td>Capital</td><td>Bandera</td>
+    </tr>
+    <tr *ngFor="let art of banderas">
+      <td >{{art.name}}</td>
+      <td >{{art.capital}}</td>
+      <td>
+        <button [routerLink] ="['/pais/', art.alpha3Code ]" >
+          <span>
+            <img src="{{art.flag}}" alt="">
+          </span>
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+<ng-template  #espera>Esperando datos...</ng-template>
